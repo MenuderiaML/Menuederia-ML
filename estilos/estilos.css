@@ -574,3 +574,9 @@ select:focus{
     font-size:14px;
     font-style:italic;
 }
+span.titulo-navbar-MENU {
+  font-family: 'Great Vibes', cursive;
+  color: #f4c400;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
