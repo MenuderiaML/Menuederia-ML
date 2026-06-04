@@ -120,10 +120,18 @@ ul{
 .navbar-brand span{
   color:var(--color-amarillo);
   font-weight:bold;
-  font-size:18px;
+  font-size:25px;
   line-height:1.1;
   letter-spacing:0.5px;
   white-space:normal;
+
+}
+
+span.titulo-navbar-MENU {
+  font-family: 'Great Vibes', cursive;
+  color: #f4c400;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
 .navbar-centro{
@@ -405,16 +413,6 @@ select:focus{
   }
 
 }
-
-
-
-
-
-
-
-
-
-
 .barra{
   background:transparent;
   margin-bottom:10px;
@@ -573,10 +571,5 @@ select:focus{
     color:var(--color-amarillo);
     font-size:14px;
     font-style:italic;
-}
-span.titulo-navbar-MENU {
-  font-family: 'Great Vibes', cursive;
-  color: #f4c400;
-  font-size: 25px;
-  letter-spacing: 1px;
+
 }
