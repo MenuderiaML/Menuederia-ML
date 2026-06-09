@@ -34,14 +34,7 @@ body{
   min-height:100%;
 }
 
-body{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  font-family:'Times New Roman', Times, serif;
-  background:linear-gradient(160deg, var(--color-negro), var(--color-gris-oscuro), var(--color-gris-borde));
-  color:var(--color-blanco);
-}
+
 
 
 /* ===== 3. SELECTORES BASE ===== */
@@ -105,7 +98,7 @@ ul{
 
 .navbar{
   background:rgba(18,18,18,0.95);
-  border-bottom:3px solid var(--color-amarillo);
+  border-bottom:none;
 }
 
 .navbar .menu-container{
@@ -222,19 +215,20 @@ span.titulo-navbar-MENU {
 .hero,
 .imagen,
 .logo-contacto{
-  width:100%;
+  width:85%;          /* antes 100% */
+  max-width:850px;    /* limita el tamaño en pantallas grandes */
   height:auto;
   object-fit:contain;
+
   border-radius:18px;
   border:none;
-  margin-bottom:15px;
+
+  margin:0 auto 15px; /* centra la imagen */
+
   box-shadow:0 10px 25px rgba(0,0,0,0.35);
 }
 
-.logo-contacto{
-  background:var(--color-blanco);
-  padding:15px;
-}
+
 
 
 /* ===== 8. TEXTOS ===== */
@@ -413,6 +407,16 @@ select:focus{
   }
 
 }
+
+
+
+
+
+
+
+
+
+
 .barra{
   background:transparent;
   margin-bottom:10px;
@@ -526,8 +530,27 @@ select:focus{
 }
 
 .btn-mapa{
-  background:var(--color-amarillo);
-  color:var(--color-negro);
+  display:block;
+  width:100%;
+
+  background:var(--color-azul-cta);
+  color:var(--color-blanco);
+
+  border:none;
+  padding:13px;
+
+  border-radius:15px;
+
+  font-weight:bold;
+  text-align:center;
+  text-decoration:none;
+
+  transition:all 0.3s ease;
+}
+
+.btn-mapa:hover{
+  background:var(--color-blanco);
+  color:var(--color-azul-cta);
 }
 
 .btn-whatsapp{
@@ -572,4 +595,591 @@ select:focus{
     font-size:14px;
     font-style:italic;
 
+}
+
+
+.navbar-centro{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.titulo-navbar-MENU{
+  width:100%;
+  text-align:center;
+  margin:0;
+}
+
+.nombre-logo{
+  font-family:'Great Vibes', cursive;
+  color:#f4c400;
+  font-size:28px;
+  display:block;
+}
+
+.menu-principal{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  padding-top:40px;
+}
+
+.opcion{
+  width:90%;
+  max-width:420px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:15px;
+
+  padding:20px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+
+/* ===== HERO DE FONDO ===== */
+
+.hero-fondo{
+    width:100%;
+    max-width:1000px;
+    height:220px;
+
+    margin:0 auto;
+
+    overflow:hidden;
+    position:relative;
+}
+
+.hero-fondo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0.25;
+
+    filter:
+        brightness(0.8)
+        blur(1px);
+
+    display:block;
+}
+
+/* degradado para fusionar con el fondo */
+
+.hero-fondo::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(18,18,18,0.2),
+        rgba(18,18,18,0.85)
+    );
+}
+
+.menu-principal{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:-60px;
+
+    position:relative;
+    z-index:2;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:'Times New Roman', Times, serif;
+}
+ 
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:'Times New Roman', Times, serif;
+
+  background:linear-gradient(
+    160deg,
+    var(--color-negro),
+    var(--color-gris-oscuro),
+    var(--color-gris-borde)
+  );
+
+  color:white;
+}
+
+/* ===== SOLO MENU PRINCIPAL ===== */
+
+.pagina-menu{
+  position:relative;
+
+  background:linear-gradient(
+      160deg,
+      #121212,
+      #1b1b1b,
+      #252525
+  );
+}
+
+.pagina-menu{
+  position:relative;
+
+  background:linear-gradient(
+      160deg,
+      #121212,
+      #1b1b1b,
+      #252525
+  );
+}
+
+.pagina-menu::before{
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background-image:url("Logo-blanco.png");
+    
+    background-position:center center;
+
+    background-size:75%;
+
+    opacity:0.08;
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+/* ===== SOLO MENU PRINCIPAL ===== */
+
+.pagina-menu{
+    position:relative;
+
+    background:linear-gradient(
+        160deg,
+        #121212,
+        #1b1b1b,
+        #252525
+    );
+
+    overflow-x:hidden;
+}
+
+.pagina-menu::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:url("Logo-blanco.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+
+    opacity:.07;
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+@media(max-width:768px){
+
+    .pagina-menu::before{
+        background-size:95%;
+        opacity:.05;
+    }
+
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  font-family:'Times New Roman', Times, serif;
+
+  background:linear-gradient(
+    160deg,
+    var(--color-negro),
+    var(--color-gris-oscuro),
+    var(--color-gris-borde)
+  );
+
+  color:white;
+}
+
+
+
+
+
+
+
+
+/* ===== ESTILO MENU RESTAURANTE ===== */
+
+.item-menu{
+    width:85%;
+    max-width:500px;
+
+    margin:8px auto;
+
+    padding:10px 0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px dashed rgba(255,255,255,0.25);
+
+    color:white;
+    font-size:17px;
+}
+
+.precio-menu{
+    color:var(--color-amarillo);
+    font-weight:bold;
+    font-size:19px;
+}
+
+.titulo{
+    margin-top:28px;
+    margin-bottom:14px;
+}
+
+.item-menu span:first-child{
+    text-align:left;
+    max-width:75%;
+}
+
+/* ===== FORMATO MENU RESTAURANTE ===== */
+
+.item-menu{
+    width:85%;
+    max-width:500px;
+
+    margin:8px auto;
+    padding:10px 0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:1px dashed rgba(255,255,255,.20);
+
+    color:white;
+    font-size:17px;
+}
+
+.precio-menu{
+    color:var(--color-amarillo);
+    font-size:20px;
+    font-weight:bold;
+}
+
+.descripcion-menu{
+    justify-content:center;
+    text-align:center;
+    border:none;
+    opacity:.9;
+}
+
+.guisados-card{
+    width:90%;
+    max-width:520px;
+
+    margin:30px auto 10px;
+    padding:20px;
+
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.guisados-card h4{
+    color:var(--color-amarillo);
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.guisados-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.guisados-grid span{
+    color:white;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+    .guisados-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.item-menu{
+    width:85%;
+    max-width:500px;
+    margin:8px auto;
+    padding:10px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px dashed rgba(255,255,255,.20);
+    color:white;
+    font-size:17px;
+}
+
+.precio-menu{
+    color:var(--color-amarillo);
+    font-size:20px;
+    font-weight:bold;
+}
+
+@media (max-width:768px){
+
+  main{
+    display:flex;
+    justify-content:center;
+  }
+
+  .menu-container{
+    display:flex;
+    justify-content:center;
+  }
+
+  .pantalla{
+    width:100%;
+    max-width:400px;
+    margin:20px auto;
+  }
+
+}
+
+@media (max-width:768px){
+
+  main{
+    display:flex;
+    justify-content:center;
+  }
+
+  .menu-container{
+    display:flex;
+    justify-content:center;
+  }
+
+  .pantalla{
+    width:100%;
+    max-width:400px;
+    margin:20px auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+
+    font-family:'Times New Roman', Times, serif;
+
+    background:linear-gradient(
+      160deg,
+      var(--color-negro),
+      var(--color-gris-oscuro),
+      var(--color-gris-borde)
+    );
+
+    color:white;
+}
+
+main{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.pantalla{
+    margin:15px auto;
+}
+
+@media (max-width:768px){
+
+    .pantalla{
+        padding:15px;
+        margin:10px auto;
+    }
+
+    .imagen{
+        width:75%;
+        margin-bottom:10px;
+    }
+
+    .titulo{
+        margin-bottom:8px;
+    }
+
+    .item-menu{
+        margin:4px auto;
+        padding:7px 0;
+    }
+
+    .footer{
+        padding:12px;
+    }
+
+}
+
+
+/* ===== BOTÓN REGRESAR ===== */
+
+.pantalla{
+    position:relative;
+}
+
+.btn-back{
+    position:absolute;
+    top:15px;
+    left:15px;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(8px);
+
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:50%;
+
+    color:var(--color-amarillo);
+    font-size:24px;
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:all .25s ease;
+}
+
+.btn-back:hover{
+    background:rgba(255,255,255,0.15);
+    transform:scale(1.08);
+    color:white;
+}
+
+.info-contacto{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:25px;
+}
+
+.item-contacto{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:15px;
+    padding:14px;
+}
+
+/* ===== CONTACTO ESTILO MENÚ ===== */
+
+.contacto-card{
+    max-width:650px;
+}
+
+.logo-contacto-limpio{
+    width:100px;
+    margin:0 auto 15px;
+    display:block;
+    filter:brightness(0) invert(1);
+}
+
+.acciones-contacto{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.btn-contacto{
+    border-radius:15px;
+    padding:14px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.btn-contacto:hover{
+    transform:translateY(-2px);
+}
+
+/* ===== CONTACTO ESCRITORIO ===== */
+
+@media (min-width: 769px){
+
+    .contacto-card{
+        max-width:850px;
+        padding:35px;
+    }
+
+    .logo-contacto-limpio{
+        width:120px;
+        margin:0 auto 25px;
+    }
+
+    .item-menu{
+        max-width:600px;
+        margin:10px auto;
+    }
+
+    .acciones-contacto{
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+        margin-top:30px;
+    }
+
+    .btn-contacto{
+        width:220px;
+    }
+
+}
+
+.tituloey{
+  color:var(--color-blanco);
 }
